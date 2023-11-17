@@ -43,6 +43,12 @@ real	0m24.831s
 user	0m16.695s
 sys	0m4.730s
 ```
+# P1 parallel P2 serial
+```
+real	0m46.594s
+user	0m17.482s
+sys	0m5.081s
+```
 
 # P1 parallel P2 Parallel
 ```
@@ -52,14 +58,7 @@ user	0m23.177s
 sys	0m12.218s
 ```
 
-# P1 parallel P2 serial
-```
-real	0m46.594s
-user	0m17.482s
-sys	0m5.081s
-```
-
-# P1 parallel P2 Xargs serial
+# P1 parallel P2 Xargs paralelo
 ```
 time parallel python3 generate_input.py -i ::: {0..9} | xargs -P 4 -L1 python3 process2.py -s >> y.out
 real	0m13.081s
